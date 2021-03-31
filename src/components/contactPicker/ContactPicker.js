@@ -6,17 +6,17 @@ export const ContactPicker = ({name, contacts, onChange}) => {
               name={name}>
         <option 
           key={-1}
-          value=""
+          value={""}
           selected="selected">
           No Contact Selected
         </option>
-        {contacts.map(contact => {
+        {contacts.map((contact) => {
           return (
             <option
               key={contact}
               value={contact}>
             {contact}
-            </option>)
+            </option>);
         })}
       </select>
     )

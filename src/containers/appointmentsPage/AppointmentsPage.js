@@ -3,9 +3,9 @@ import {AppointmentForm} from "../../components/appointmentForm/AppointmentForm"
 import { TileList } from "../../components/tileList/TileList";
 
 
-export const AppointmentsPage = ({contacts, appointments, addAppointment}) => {
+export const AppointmentsPage = ({appointments, addAppointment, contacts}) => {
   const [title, setTitle] = useState('');
-  const [contact, setContact] = useState(contacts.length > 0 ? contact[0].name : '');
+  const [contact, setContact] = useState(contacts.length > 0 ? contacts[0].name : '');
   const [time, setTime] = useState('');
   const [date, setDate] = useState('');
   
@@ -24,12 +24,12 @@ export const AppointmentsPage = ({contacts, appointments, addAppointment}) => {
       <section>
         <h2>Add Appointment</h2>
         <AppointmentForm
+          contacts={contacts}
           title={title} setTitle={setTitle}
           contact={contact} setContact={setContact}
           time={time} setTime={setTime}
           date={date} setDate={setDate}
           handleSubmit={handleSubmit}
-          contacts={contacts}
         />
       </section>
       <hr />

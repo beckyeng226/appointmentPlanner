@@ -16,7 +16,7 @@ export const ContactForm = ({
           type="text"
           name="name"
           value={name}
-          onChange={((e) => setName(e.target.value))}
+          onChange={(e) => setName(e.target.value)}
           required
           placeholder="Contact Name"
         />
@@ -28,7 +28,7 @@ export const ContactForm = ({
           name="phone"
           value={phone}
           pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
-          onChange={((e) => setPhone(e.target.value))}
+          onChange={(e) => setPhone(e.target.value)}
           required
           placeholder="Phone Number"
           />
@@ -39,17 +39,15 @@ export const ContactForm = ({
           type="email"
           name="email"
           value={email}
-          onChange={((e) => setEmail(e.target.value))}
+          onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="Email Address"
         />
       </label>
       <br/>
-      <label>
+      
         <input type="submit" value="Add Contact" />
-      </label>
-    
-
+      
     </form>
   );
 };

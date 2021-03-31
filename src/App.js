@@ -21,9 +21,9 @@ function App() {
         name: name,
         phone: phone,
         email: email,
-      }
-    ])
-  }
+      },
+    ]);
+  };
 
   const addAppointment = (title, contact, date, time) => {
     setAppointments([
@@ -33,9 +33,9 @@ function App() {
         contact: contact,
         date: date,
         time: time,
-      }
-    ])
-  }
+      },
+    ]);
+  };
   
 
   return (
